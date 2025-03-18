@@ -1,19 +1,14 @@
 %option noyywrap
 %{
-    #include <stdio.h>
-    int v = 0, c = 0;
+    #include<stdio.h>
 %}
 
 %%
-[aeiouAEIOU]    {v++;}                
-[a-zA-Z]        {c++;}                
-[ \t\n]          ;                     
-.               ;   
+[0-9]+    {printf("%s\n",yytext);}
+.   ;
 %%
-
-int main() {
-    printf("Enter string: ");
-    yylex();                           
-    printf("Number of vowels: %d\n", v);
+int main(){
+    printf("Enter String: ");
+    yylex();
     return 0;
 }

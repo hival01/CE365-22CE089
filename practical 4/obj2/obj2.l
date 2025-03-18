@@ -5,7 +5,7 @@
 
 %%
 charusat     {printf("university");}
-charusat     {printf("university");}
+Charusat     {printf("University");}
 .            {printf("%c", yytext[0]);}  
 %%
 
